@@ -64,7 +64,7 @@ class ApplicationAdmin(admin.ModelAdmin):
                                 'typeOfLeave',
                                 'startDate',
                                 'endDate',
-                                'availLTC',
+                                'availLTC'
                                 ]
 
     form = ApplicationCreationForm
@@ -103,8 +103,7 @@ class ApplicationAdmin(admin.ModelAdmin):
                                      'startDate',
                                      'endDate',
                                      'availLTC',
-                                     'submitted',
-                                     'approved_by'
+                                     'submitted'
                                      ]
             elif not request.user.is_admin:
                 kwargs['exclude'] = ['applicant',
@@ -136,16 +135,17 @@ class ApplicationAdmin(admin.ModelAdmin):
                     'endDate',
                     'typeOfLeave',
                     'submitted',
-                    'approved')
+                    'approved'
+                    )
 
     fieldsets = ((None, {'fields': ('applicant',
                                     'typeOfLeave',
                                     'startDate',
                                     'endDate',
-                                    'availLTC'
-                                    '')}),
+                                    'availLTC',
+                                    )}),
                 ('Status', {'fields': ('approved',
-                                    'approved_by',
+                                    'approved_by'
                                     )}),
                                     )
 
@@ -162,7 +162,8 @@ class ApplicationAdmin(admin.ModelAdmin):
     search_fields = ('startDate',
                      'endDate',
                      'submitted',
-                     'approved')
+                     'approved'
+                     )
     readonly_fields = ['approved','approved_by']
 
     ordering = ('startDate', 'endDate')
