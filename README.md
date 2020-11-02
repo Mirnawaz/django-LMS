@@ -10,6 +10,7 @@ pip install -r requirements.txt
 
 Run below command in terminal to start the server
 
-`python manage.py runserver`
-
+```bash
+python manage.py runserver
+```
 Open the local server
