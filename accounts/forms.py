@@ -66,8 +66,10 @@ class UserAdmin(BaseUserAdmin):
         return result
 
     def get_readonly_fields(self, request, obj=None):
-        if obj : # editing an existing object
+        if obj and not request.user.is_admin : # editing an existing object
             return ['email','applicant', 'user_type']
+        elif request.user.is_admin :
+            return []
         return self.readonly_fields
 
 
