@@ -1,6 +1,15 @@
 # django-LMS
 Leave Management System using Django
 
-Run below command to start server
+## Installation
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required libraries specified in requirements.txt
 
-`python3 manage.py runserver`
+```bash
+pip install -r requirements.txt
+```
+
+Run below command in terminal to start the server
+
+`python manage.py runserver`
+
+Open the local server
